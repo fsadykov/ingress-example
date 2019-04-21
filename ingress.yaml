@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: fuchicorp-example
+
+spec:
+  rules:
+  - host: appone.fuchicorp.com
+    http:
+      paths:
+      - backend:
+          serviceName: appone-service
+          servicePort: 8080
+
+  - host: apptwo.fuchicorp.com
+    http:
+      paths:
+      - backend:
+          serviceName: apptwo-service
+          servicePort: 8081
+
+  - host: appthree.fuchicorp.com
+    http:
+      paths:
+      - backend:
+          serviceName: appthree-service
+          servicePort: 8083

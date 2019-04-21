@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: new-fuchicorp-ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+
+spec:
+  rules:
+
+  - host: fuchicorp.com
+    http:
+      paths:
+
+      - path: /appone
+        backend:
+          serviceName: appone-service
+          servicePort: 8080
+
+      - path: /apptwo
+        backend:
+          serviceName: apptwo-service
+          servicePort: 8081
+
+      - path: /appthree
+        backend:
+          serviceName: appthree-service
+          servicePort: 8083

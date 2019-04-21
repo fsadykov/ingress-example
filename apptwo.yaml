@@ -1,0 +1,13 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apptwo
+  labels:
+    app: apptwo
+spec:
+  containers:
+  - name: apptwo-container
+    image: fsadykov/docker-testing
+    command: ["python"]
+    args: ["/app/app.py", "--name", "apptwo"]
