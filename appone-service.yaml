@@ -6,7 +6,7 @@ metadata:
     app: appone
 spec:
   ports:
-  - port: 8080
+  - port: 8081
     targetPort: 5000
   selector:
     app: appone

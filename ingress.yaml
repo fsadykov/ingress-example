@@ -5,19 +5,20 @@ metadata:
 
 spec:
   rules:
+
   - host: appone.fuchicorp.com
     http:
       paths:
       - backend:
           serviceName: appone-service
-          servicePort: 8080
+          servicePort: 8081
 
   - host: apptwo.fuchicorp.com
     http:
       paths:
       - backend:
           serviceName: apptwo-service
-          servicePort: 8081
+          servicePort: 8082
 
   - host: appthree.fuchicorp.com
     http:
